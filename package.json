@@ -17,6 +17,7 @@
     "@vitejs/plugin-react": "^4.2.1",
     "@web3modal/wagmi": "^3.4.0",
     "arweave": "^1.14.4",
+    "autoprefixer": "^10.4.16",
     "buffer": "^6.0.3",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
