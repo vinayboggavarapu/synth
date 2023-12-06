@@ -1,4 +1,5 @@
 // import { decryptFile } from "@/utils/decrypt";
+
 import { myQuery } from "@/utils/queryInit";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
@@ -6,6 +7,7 @@ import { Link } from "react-router-dom";
 const Collections = () => {
   const [data, setData] = useState([]);
   let groupedTransactions = {};
+
   const fetchData = async () => {
     const results = await myQuery
       .search("irys:transactions")

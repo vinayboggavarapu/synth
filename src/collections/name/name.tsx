@@ -8,6 +8,7 @@ const CollectionPage = () => {
   const [data, setData] = useState([]);
   const [stampsData, setStampsData] = useState({});
   const params = useParams();
+  const { isLoading } = useStampLoader();
 
   const fetchData = async () => {
     const results = await myQuery
@@ -35,7 +36,7 @@ const CollectionPage = () => {
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [isLoading]);
 
   useEffect(() => {
     if (data.length > 0) {
@@ -43,7 +44,7 @@ const CollectionPage = () => {
       const ids = data.map((item) => item.id);
       fetchStamps(ids);
     }
-  }, [data]);
+  }, [data, isLoading]);
 
   return (
     <div className="flex flex-col gap-4 w-full">
