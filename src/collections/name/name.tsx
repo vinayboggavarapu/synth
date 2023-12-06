@@ -90,7 +90,7 @@ const CollectionPage = () => {
 
               {
                 //@ts-expect-error checking
-                item.tags.length < 4 && (
+                item.tags.length < 5 && (
                   //@ts-expect-error checking
                   <StampTxn id={item.id} count={stampsData} />
                 )
