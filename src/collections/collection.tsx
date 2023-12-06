@@ -16,12 +16,10 @@ const Collections = () => {
     groupedTransactions = results.reduce((grouped, transaction) => {
       console.log(results);
       const key = transaction.tags[0].value;
-      //@ts-expect-error checking
+
       if (!grouped[key]) {
-        //@ts-expect-error checking
         grouped[key] = [];
       }
-      //@ts-expect-error checking
       grouped[key].push(transaction.id);
       return grouped;
     }, {});
@@ -36,11 +34,13 @@ const Collections = () => {
   return (
 
 
-    <div className="flex flex-col pt-16">
+    <div className="flex flex-col pt-16 pb-40">
      <div className="flex flex-col">
        <div className="text-zinc-300 text-5xl font-bold pr-6">Dataset Collections</div>
      <div className="w-auto text-zinc-300 text-2xl font-normal font-['Space Grotesk'] pr-6 pt-4">Explore Collections curated to train your AI model</div>
      </div>
+     <Link to="/create">
+
 <div className="ml-6 mt-20 w-[200px] h-[60px] px-[50px]  bg-gradient-to-b from-fuchsia-500 to-fuchsia-700 rounded-[20px] justify-center items-center gap-3 inline-flex">
           <div className="w-5 h-5 relative" />
           <div className="w-auto h-auto relative">
@@ -52,7 +52,7 @@ const Collections = () => {
           
           
 </div>
-
+</Link>
 
     <div className=" p-3 overflow-y-auto grid grid-cols-4 gap-4 pt-20">
       {data &&

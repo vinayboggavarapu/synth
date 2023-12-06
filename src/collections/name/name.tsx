@@ -19,7 +19,6 @@ const CollectionPage = () => {
     setData(results);
   };
 
-  //@ts-expect-error checking
   const fetchStamps = async (ids) => {
     const results = {};
 
@@ -29,7 +28,6 @@ const CollectionPage = () => {
         .sort("DESC")
         .tags([{ name: "DReq-Stamp", values: [id] }])
         .first();
-      //@ts-expect-error checking
       results[id] = res ? res.tags[3]?.value : 0;
     }
     setStampsData(results);

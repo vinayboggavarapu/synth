@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 const Home = () => {
   // const getData = async () => {
   //   const results = await myQuery
@@ -9,26 +10,30 @@ const Home = () => {
   //   getData();
   // }, []);
   return (
-    <div className="flex flex-col pt-10">
+    <div className="flex flex-col pt-10 pb-10">
       <div className="flex flex-row pt-20">
         <div className="flex-col">
-          <div className="w-auto text-white text-5xl font-bold pl-6 pr-10">
+          <div className="w-auto text-white text-5xl font-bold pl-14 pr-10">
             Synthesize your AI model with data on our platform
           </div>
-          <div className="w-auto text-white text-2xl font-medium font-['Space Grotesk'] p-6">
+          <div className="w-auto text-white text-2xl font-medium font-['Space Grotesk'] p-14">
             Unleash the power of collective datasets for AI training, secured
             permanently with Arweave, shaping the future of decentralized data
             collaboration
           </div>
-          <div className="ml-6 mt-10 w-auto h-[60px] px-[50px]  bg-gradient-to-b from-fuchsia-500 to-fuchsia-700 rounded-[20px] justify-center items-center gap-3 inline-flex">
-            <div className="w-5 h-5 relative" />
-            <div className="text-white text-1x font-semibold pl-22 leading-7">
+<Link to="/collections">
+          <div className="ml-14 mt-10 w-auto h-[60px] px-[50px]  bg-gradient-to-b from-fuchsia-500 to-fuchsia-700 rounded-[20px] justify-center items-center gap-3 inline-flex">
+            
+            <div className="w-5 h-5 relative items-center" />
+            <div className="text-white text-2xl font-semibold ">
               Explore Collections
             </div>
             <div className="w-auto h-auto relative">
               <img src="/expand.svg" width={24} height={24} alt="arrow-right" />
             </div>
           </div>
+                      </Link>
+
           {/* <div className="flex-row flex p-20">
             <div className="flex-col">
             <div className="w-[150px] text-fuchsia-500 text-2xl font-extrabold  capitalize leading-[39.20px]">25+ </div>
@@ -56,11 +61,12 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 grid-rows-2 gap-4 pt-15">
+      <div className="grid grid-cols-2 grid-rows-2 gap-40 mx-auto pt-24">
         <div className="w-[590.18px] h-[360px] p-[36.89px] bg-gradient-to-b from-accentblue to-accentpurple rounded-[18.44px] flex-col justify-start items-start gap-11 inline-flex">
           <div className="w-[73.77px] h-[73.77px] relative bg-gradient-to-b from-fuchsia-500 to-fuchsia-600 rounded-2xl">
-            <div className="w-[68px] h-[50.08px] left-[3.11px] top-[12.11px] absolute">
-              <div className="w-[15.62px] h-[13.39px] left-[25.74px] top-[24.19px] absolute"></div>
+            <div className="w-[100px] h-[100px] items-center justify-center absolute">
+
+                <img src="/community.svg" alt="comm" />
             </div>
           </div>
           <div className="self-stretch h-[134.30px] flex-col justify-start items-start gap-[30.74px] flex">
@@ -78,9 +84,10 @@ const Home = () => {
         </div>
         <div className="w-[590.18px] h-[360px] p-[36.89px] bg-gradient-to-b from-accentblue to-accentpurple rounded-[18.44px] flex-col justify-start items-start gap-11 inline-flex">
           <div className="w-[73.77px] h-[73.77px] relative bg-gradient-to-b from-fuchsia-500 to-fuchsia-600 rounded-2xl">
-            <div className="w-[68px] h-[50.08px] left-[3.11px] top-[12.11px] absolute">
-              <div className="w-[15.62px] h-[13.39px] left-[25.74px] top-[24.19px] absolute"></div>
-            </div>
+          <div className="w-[100px] h-[100px] items-center justify-center absolute">
+
+<img src="/incentive.svg" alt="comm" />
+</div>
           </div>
           <div className="self-stretch h-[134.30px] flex-col  justify-start items-start gap-[30.74px] flex">
             <div className="self-stretch h-[134.30px] flex-col justify-start items-start gap-[12.30px] flex">
@@ -98,9 +105,10 @@ const Home = () => {
         <div className="row-start-2">
           <div className="w-[590.18px] h-[360px] p-[36.89px] bg-gradient-to-b from-accentblue to-accentpurple rounded-[18.44px] flex-col justify-start items-start gap-11 inline-flex">
             <div className="w-[73.77px] h-[73.77px] relative bg-gradient-to-b from-fuchsia-500 to-fuchsia-600 rounded-2xl">
-              <div className="w-[68px] h-[50.08px] left-[3.11px] top-[12.11px] absolute">
-                <div className="w-[15.62px] h-[13.39px] left-[25.74px] top-[24.19px] absolute"></div>
-              </div>
+            <div className="w-[100px] h-[100px] items-center justify-center absolute">
+
+<img src="/exclusive.svg" alt="comm" />
+</div>
             </div>
             <div className="self-stretch h-[134.30px] flex-col justify-start items-start gap-[30.74px] flex">
               <div className="self-stretch h-[134.30px] flex-col justify-start items-start gap-[12.30px] flex">
@@ -118,9 +126,10 @@ const Home = () => {
         <div className="row-start-2">
           <div className="w-[590.18px] h-[360px] p-[36.89px] bg-gradient-to-b from-accentblue to-accentpurple rounded-[18.44px] flex-col justify-start items-start gap-11 inline-flex">
             <div className="w-[73.77px] h-[73.77px] relative bg-gradient-to-b from-fuchsia-500 to-fuchsia-600 rounded-2xl">
-              <div className="w-[68px] h-[50.08px] left-[3.11px] top-[12.11px] absolute">
-                <div className="w-[15.62px] h-[13.39px] left-[25.74px] top-[24.19px] absolute"></div>
-              </div>
+            <div className="w-[100px] h-[100px] items-center justify-center absolute">
+
+<img src="/externalize.svg" alt="comm" />
+</div>
             </div>
             <div className="self-stretch h-[134.30px] flex-col justify-start items-start gap-[30.74px] flex">
               <div className="self-stretch h-[134.30px] flex-col justify-start items-start gap-[12.30px] flex">
@@ -137,7 +146,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="flex flex-col pt-10">
+      <div className="flex flex-col pt-20 pl-16">
         <div className="w-auto h-auto p-7 justify-start items-start gap-[9px] inline-flex">
           <div className="w-auto h-auto relative">
             <img src="/notable.svg" width={30} height={30} alt="te" />
@@ -148,7 +157,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="flex flex-row">
+      <div className="flex flex-row pl-16" >
         <div className="w-auto h-auto bg-neutral-700 rounded-[20px] flex-col justify-start items-center inline-flex">
           <div className="self-stretch h-64 rounded-tl-[20px] rounded-tr-[20px] flex-col justify-start items-start gap-2.5 flex">
             <img
@@ -188,7 +197,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="w-full h-auto px-50 py-10 flex-col justify-center items-center gap-[27px] inline-flex">
+      <div className="w-full h-auto px-50 py-10 flex-col justify-center items-center gap-[27px] pt-14 inline-flex">
         <div className="flex-col justify-center items-center gap-[19px] flex">
           <div className="text-justify text-zinc-300 text-2xl font-normal ">
             Not sure about building a collection but still want one?
@@ -197,6 +206,8 @@ const Home = () => {
             Request curated Collections from creators by creating a campaign{" "}
           </div>
         </div>
+        <Link to="/request">
+
         <div className="w-56 py-2.5 bg-gradient-to-b from-fuchsia-500 to-fuchsia-600 rounded-[20px] justify-center items-center inline-flex">
           <div className="pl-[0.50px] py-[0.50px] justify-end items-center flex">
             <div className="self-stretch justify-start items-center gap-[7px] inline-flex">
@@ -208,6 +219,7 @@ const Home = () => {
           </div>
           <div className="w-4 h-4 relative" />
         </div>
+        </Link>
       </div>
 
       

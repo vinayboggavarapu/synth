@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import {useState} from "react";
 import Datepicker from "react-tailwindcss-datepicker"
 const Request = () => {
     
@@ -14,7 +14,7 @@ const Request = () => {
 
 
     return (
-        <div className="flex flex-col">
+        <div className="flex flex-col ">
             <div className="items-center justify-center flex flex-col">
 
                 <div className="text-center text-zinc-300 text-[32px] font-bold">Request A Collection</div>
