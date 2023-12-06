@@ -32,7 +32,6 @@ const UploadPage = () => {
     // const file = event.target.files[0];
     Papa.parse(file, {
       complete: async (results) => {
-        console.log(results);
         const text = results.data.map((row) => row.join(" ")).join("\n");
         // console.log(text);
         sha256(text).then((hash) => {
@@ -130,6 +129,7 @@ const UploadPage = () => {
           { tags }
         );
         console.log(`File uploaded ==> https://gateway.irys.xyz/${receipt.id}`);
+        alert("File uploaded successfully");
       } catch (e) {
         console.log("Error uploading file ", e);
       }
