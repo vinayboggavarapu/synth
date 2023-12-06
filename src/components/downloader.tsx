@@ -15,7 +15,6 @@ const handleDownloadPublicFile = async (id: string) => {
   rootElement?.removeChild(refElement);
 };
 
-//@ts-expect-error checking
 const Downloader = ({ data }) => {
   console.log(data);
   return (

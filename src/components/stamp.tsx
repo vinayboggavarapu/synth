@@ -4,7 +4,7 @@ import { Triangle } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useAccount } from "wagmi";
 
-const StampTxn = ({ id, count }: { id: string; count: any }) => {
+const StampTxn = ({ id, count }: { id: string; count: [] }) => {
   console.log("stamping id", id);
   const [stamps, setStampCount] = useState(0);
   const { address } = useAccount();
