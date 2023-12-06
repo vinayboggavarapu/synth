@@ -4,6 +4,7 @@ import Layout from "./components/layout";
 import Name from "./collections/name/name";
 import Collections from "./collections/collection";
 import UploadPage from "./create/create";
+import Request from "./request/request";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <Route path="/collections" element={<Collections />} />
         <Route path="/collections/:name" element={<Name />} />
         <Route path="/create" element={<UploadPage />} />
+        <Route path="/request" element={<Request />} />
       </Route>
     </Routes>
   );
