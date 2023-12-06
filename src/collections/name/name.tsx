@@ -89,10 +89,12 @@ const CollectionPage = () => {
             }
             <div className="flex gap-10 items-center">
               <Downloader data={item} />
+
               {
                 //@ts-expect-error checking
                 item.tags.length < 4 && (
-                  <StampTxn id={item.id as string} count={stampsData} />
+                  //@ts-expect-error checking
+                  <StampTxn id={item.id} count={stampsData} />
                 )
               }
             </div>
