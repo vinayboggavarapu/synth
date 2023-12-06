@@ -172,7 +172,7 @@ const UploadPage = () => {
         </div>
       )}
       {tabs === 2 && (
-        <div className="flex flex-col  justify-center items-center gap-11 h-[40vh]">
+        <div className="flex flex-col justify-center items-center gap-11 h-[40vh]">
           <button
             onClick={async () => {
               setFundingLoader(true);
@@ -232,6 +232,7 @@ const UploadPage = () => {
             Details
           </p>
         </div>
+
         <hr className="absolute border-[#0162DD] border w-full" />
         <div
           className="flex flex-col cursor-pointer gap-1 w-32 bg-black z-20  items-center"
@@ -246,7 +247,7 @@ const UploadPage = () => {
               tabs === 2 ? "text-[#0162DD] font-semibold" : "text-gray-400"
             )}
           >
-            Fund the node
+            Fund
           </p>
         </div>
 
@@ -267,7 +268,7 @@ const UploadPage = () => {
               tabs === 3 ? "text-[#0162DD] font-semibold" : "text-gray-400"
             )}
           >
-            Select your file
+            Upload
           </p>
         </div>
       </div>
