@@ -21,18 +21,22 @@ const Home = () => {
             permanently with Arweave, shaping the future of decentralized data
             collaboration
           </div>
-<Link to="/collections">
-          <div className="ml-14 mt-10 w-auto h-[60px] px-[50px]  bg-gradient-to-b from-fuchsia-500 to-fuchsia-700 rounded-[20px] justify-center items-center gap-3 inline-flex">
-            
-            <div className="w-5 h-5 relative items-center" />
-            <div className="text-white text-2xl font-semibold ">
-              Explore Collections
+          <Link to="/collections">
+            <div className="ml-14 mt-10 w-auto h-[60px] px-[50px]  bg-gradient-to-b from-fuchsia-500 to-fuchsia-700 rounded-[20px] justify-center items-center gap-3 inline-flex">
+              <div className="w-5 h-5 relative items-center" />
+              <div className="text-white text-2xl font-semibold ">
+                Explore Collections
+              </div>
+              <div className="w-auto h-auto relative">
+                <img
+                  src="/expand.svg"
+                  width={24}
+                  height={24}
+                  alt="arrow-right"
+                />
+              </div>
             </div>
-            <div className="w-auto h-auto relative">
-              <img src="/expand.svg" width={24} height={24} alt="arrow-right" />
-            </div>
-          </div>
-                      </Link>
+          </Link>
 
           {/* <div className="flex-row flex p-20">
             <div className="flex-col">
@@ -61,12 +65,11 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 grid-rows-2 gap-40 mx-auto pt-24">
-        <div className="w-[590.18px] h-[360px] p-[36.89px] bg-gradient-to-b from-accentblue to-accentpurple rounded-[18.44px] flex-col justify-start items-start gap-11 inline-flex">
+      <div className="grid grid-cols-2 grid-rows-2 gap-40 px-6 w-full mx-auto pt-24">
+        <div className="w-full h-full p-3 bg-gradient-to-b from-accentblue to-accentpurple rounded-[18.44px] flex-col justify-start items-start gap-11 inline-flex">
           <div className="w-[73.77px] h-[73.77px] relative bg-gradient-to-b from-fuchsia-500 to-fuchsia-600 rounded-2xl">
             <div className="w-[100px] h-[100px] items-center justify-center absolute">
-
-                <img src="/community.svg" alt="comm" />
+              <img src="/community.svg" alt="comm" />
             </div>
           </div>
           <div className="self-stretch h-[134.30px] flex-col justify-start items-start gap-[30.74px] flex">
@@ -82,12 +85,11 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="w-[590.18px] h-[360px] p-[36.89px] bg-gradient-to-b from-accentblue to-accentpurple rounded-[18.44px] flex-col justify-start items-start gap-11 inline-flex">
+        <div className="w-full h-full p-3  bg-gradient-to-b from-accentblue to-accentpurple rounded-[18.44px] flex-col justify-start items-start gap-11 inline-flex">
           <div className="w-[73.77px] h-[73.77px] relative bg-gradient-to-b from-fuchsia-500 to-fuchsia-600 rounded-2xl">
-          <div className="w-[100px] h-[100px] items-center justify-center absolute">
-
-<img src="/incentive.svg" alt="comm" />
-</div>
+            <div className="w-[100px] h-[100px] items-center justify-center absolute">
+              <img src="/incentive.svg" alt="comm" />
+            </div>
           </div>
           <div className="self-stretch h-[134.30px] flex-col  justify-start items-start gap-[30.74px] flex">
             <div className="self-stretch h-[134.30px] flex-col justify-start items-start gap-[12.30px] flex">
@@ -103,12 +105,11 @@ const Home = () => {
           </div>
         </div>
         <div className="row-start-2">
-          <div className="w-[590.18px] h-[360px] p-[36.89px] bg-gradient-to-b from-accentblue to-accentpurple rounded-[18.44px] flex-col justify-start items-start gap-11 inline-flex">
+          <div className="w-full h-full p-3  bg-gradient-to-b from-accentblue to-accentpurple rounded-[18.44px] flex-col justify-start items-start gap-11 inline-flex">
             <div className="w-[73.77px] h-[73.77px] relative bg-gradient-to-b from-fuchsia-500 to-fuchsia-600 rounded-2xl">
-            <div className="w-[100px] h-[100px] items-center justify-center absolute">
-
-<img src="/exclusive.svg" alt="comm" />
-</div>
+              <div className="w-[100px] h-[100px] items-center justify-center absolute">
+                <img src="/exclusive.svg" alt="comm" />
+              </div>
             </div>
             <div className="self-stretch h-[134.30px] flex-col justify-start items-start gap-[30.74px] flex">
               <div className="self-stretch h-[134.30px] flex-col justify-start items-start gap-[12.30px] flex">
@@ -124,12 +125,11 @@ const Home = () => {
           </div>
         </div>
         <div className="row-start-2">
-          <div className="w-[590.18px] h-[360px] p-[36.89px] bg-gradient-to-b from-accentblue to-accentpurple rounded-[18.44px] flex-col justify-start items-start gap-11 inline-flex">
+          <div className="w-full h-full p-3  bg-gradient-to-b from-accentblue to-accentpurple rounded-[18.44px] flex-col justify-start items-start gap-11 inline-flex">
             <div className="w-[73.77px] h-[73.77px] relative bg-gradient-to-b from-fuchsia-500 to-fuchsia-600 rounded-2xl">
-            <div className="w-[100px] h-[100px] items-center justify-center absolute">
-
-<img src="/externalize.svg" alt="comm" />
-</div>
+              <div className="w-[100px] h-[100px] items-center justify-center absolute">
+                <img src="/externalize.svg" alt="comm" />
+              </div>
             </div>
             <div className="self-stretch h-[134.30px] flex-col justify-start items-start gap-[30.74px] flex">
               <div className="self-stretch h-[134.30px] flex-col justify-start items-start gap-[12.30px] flex">
@@ -157,7 +157,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="flex flex-row pl-16" >
+      <div className="flex flex-row pl-16">
         <div className="w-auto h-auto bg-neutral-700 rounded-[20px] flex-col justify-start items-center inline-flex">
           <div className="self-stretch h-64 rounded-tl-[20px] rounded-tr-[20px] flex-col justify-start items-start gap-2.5 flex">
             <img
@@ -207,22 +207,19 @@ const Home = () => {
           </div>
         </div>
         <Link to="/request">
-
-        <div className="w-56 py-2.5 bg-gradient-to-b from-fuchsia-500 to-fuchsia-600 rounded-[20px] justify-center items-center inline-flex">
-          <div className="pl-[0.50px] py-[0.50px] justify-end items-center flex">
-            <div className="self-stretch justify-start items-center gap-[7px] inline-flex">
-              <div className="w-4 h-4 relative" />
-              <div className="text-center text-zinc-300 text-base font-semibold ">
-                Request a Collection
+          <div className="w-56 py-2.5 bg-gradient-to-b from-fuchsia-500 to-fuchsia-600 rounded-[20px] justify-center items-center inline-flex">
+            <div className="pl-[0.50px] py-[0.50px] justify-end items-center flex">
+              <div className="self-stretch justify-start items-center gap-[7px] inline-flex">
+                <div className="w-4 h-4 relative" />
+                <div className="text-center text-zinc-300 text-base font-semibold ">
+                  Request a Collection
+                </div>
               </div>
             </div>
+            <div className="w-4 h-4 relative" />
           </div>
-          <div className="w-4 h-4 relative" />
-        </div>
         </Link>
       </div>
-
-      
     </div>
 
     // <div className="flex">
