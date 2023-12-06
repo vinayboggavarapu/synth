@@ -1,5 +1,6 @@
 import Downloader from "@/components/downloader";
 import StampTxn from "@/components/stamp";
+import { useStampLoader } from "@/store/use-stamp-loader";
 import { myQuery } from "@/utils/queryInit";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";

@@ -8,7 +8,7 @@ const StampTxn = ({ id, count }: { id: string; count: any }) => {
   console.log("stamping id", id);
   const [stamps, setStampCount] = useState(0);
   const { address } = useAccount();
-  const { isLoading, setIsLoading, setStopLoading } = useStampLoader();
+  const { setIsLoading, setStopLoading } = useStampLoader();
 
   useEffect(() => {
     setStampCount(count[id]);
