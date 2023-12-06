@@ -45,7 +45,7 @@ export const getStampedTxn = async (id: string, address: string) => {
   }
 
   if (results.length > 0) {
-    console.log("already stamped");
+    alert("already stamped");
     return null;
   } else {
     const webIrys = await getIrys();

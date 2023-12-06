@@ -17,6 +17,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { cn } from "@/lib/utils";
 
 const UploadPage = () => {
   const [collectionName, setCollectionName] = useState("");
@@ -24,6 +25,7 @@ const UploadPage = () => {
   const [file, setFile] = useState<File>();
   const [isPublic, setIsPublic] = useState(false);
   const { address } = useAccount();
+  const [tabs, setTabs] = useState(1);
   let tags;
   const handleFileUpload = async (file: File) => {
     // const file = event.target.files[0];
@@ -143,37 +145,123 @@ const UploadPage = () => {
   }, [dataHash]);
 
   return (
-    <div>
-      <Select onValueChange={(e) => setIsPublic(e === "public")}>
-        <SelectTrigger className="w-[180px]">
-          <SelectValue placeholder="Visibility" />
-        </SelectTrigger>
-        <SelectContent>
-          <SelectItem value="public">Public</SelectItem>
-          <SelectItem value="private">Private</SelectItem>
-        </SelectContent>
-      </Select>
-      <input
+    <div className="flex flex-col gap-4 max-w-5xl mx-auto w-full">
+      <h1 className="text-3xl mx-auto font-semibold">Create Collection</h1>
+      {/* Section 1 */}
+      {tabs === 1 && (
+        <div className="flex flex-col  justify-center gap-11 h-[40vh]">
+          <label className="flex flex-col gap-6">
+            <p>Name</p>
+            <input
+              placeholder="Enter your collection name"
+              className="rounded-full border p-4 bg-transparent border-[#476FFF]"
+              onChange={(e) => setCollectionName(e.target.value)}
+            />
+          </label>
+          <Select onValueChange={(e) => setIsPublic(e === "public")}>
+            <SelectTrigger className="w-full bg-transparent text-white border-[#476FFF] p-4 rounded-full">
+              <SelectValue placeholder="Visibility" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="public">Public</SelectItem>
+              <SelectItem value="private">Private</SelectItem>
+            </SelectContent>
+          </Select>
+        </div>
+      )}
+      {tabs === 2 && (
+        <div className="flex flex-col  justify-center items-center gap-11 h-[40vh]">
+          <button
+            onClick={fundNode}
+            className="bg-[#476FFF] rounded-md p-3 text-lg"
+          >
+            Fund a node
+          </button>
+        </div>
+      )}
+
+      {/* <input
         placeholder="Enter your collection name"
         onChange={(e) => setCollectionName(e.target.value)}
-      />
+      /> */}
       {/* Upload the dataset for the model*/}
-      <button onClick={fundNode}>Fund a node</button>
-      <p>Upload your file</p>
-      <input
-        placeholder="Upload file"
-        type="file"
-        accept=".csv"
-        alt="Data-set Upload"
-        onChange={(e) => {
-          if (e.target.files) {
-            setFile(e.target.files[0]);
-            handleFileUpload(e.target.files[0]);
-          }
-        }}
-      />
 
-      <input type="date" />
+      {tabs === 3 && (
+        <div className="flex flex-col justify-center gap-6 items-center  h-[40vh]">
+          <p className="text-xl">Upload your file</p>
+          <input
+            placeholder="Upload file"
+            type="file"
+            accept=".csv"
+            alt="Data-set Upload"
+            onChange={(e) => {
+              if (e.target.files) {
+                setFile(e.target.files[0]);
+                handleFileUpload(e.target.files[0]);
+              }
+            }}
+          />
+        </div>
+      )}
+
+      <div className="relative w-fit flex items-center gap-11 mx-auto">
+        <div
+          className="flex cursor-pointer flex-col gap-1 bg-black z-20 w-24 items-center"
+          onClick={() => setTabs(1)}
+        >
+          <div className="w-8 h-8 flex items-center justify-center border rounded-full border-[#0162DD]">
+            {String("1").padStart(2, "0")}
+          </div>
+          <p
+            className={cn(
+              " whitespace-nowrap",
+              tabs === 1 ? "text-[#0162DD] font-semibold" : "text-gray-400"
+            )}
+          >
+            Details
+          </p>
+        </div>
+        <hr className="absolute border-[#0162DD] border w-full" />
+        <div
+          className="flex flex-col cursor-pointer gap-1 w-32 bg-black z-20  items-center"
+          onClick={() => setTabs(2)}
+        >
+          <div className="w-8 h-8 flex items-center justify-center border rounded-full border-[#0162DD]">
+            {String("2").padStart(2, "0")}
+          </div>
+          <p
+            className={cn(
+              " whitespace-nowrap",
+              tabs === 2 ? "text-[#0162DD] font-semibold" : "text-gray-400"
+            )}
+          >
+            Fund the node
+          </p>
+        </div>
+
+        <div
+          className="flex flex-col cursor-pointer gap-1 w-32 bg-black z-20 items-center"
+          onClick={() => setTabs(3)}
+        >
+          <div
+            className={cn(
+              "w-8 h-8 flex items-center justify-center border rounded-full border-[#0162DD]"
+            )}
+          >
+            {String("3").padStart(2, "0")}
+          </div>
+          <p
+            className={cn(
+              " whitespace-nowrap",
+              tabs === 3 ? "text-[#0162DD] font-semibold" : "text-gray-400"
+            )}
+          >
+            Select your file
+          </p>
+        </div>
+      </div>
+
+      {/* <input type="date" /> */}
     </div>
   );
 };
