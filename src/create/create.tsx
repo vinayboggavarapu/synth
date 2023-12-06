@@ -18,6 +18,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { cn } from "@/lib/utils";
+import { Loader2 } from "lucide-react";
 
 const UploadPage = () => {
   const [collectionName, setCollectionName] = useState("");
@@ -26,6 +27,7 @@ const UploadPage = () => {
   const [isPublic, setIsPublic] = useState(false);
   const { address } = useAccount();
   const [tabs, setTabs] = useState(1);
+  const [fundingLoader, setFundingLoader] = useState(false);
   let tags;
   const handleFileUpload = async (file: File) => {
     // const file = event.target.files[0];
@@ -172,10 +174,19 @@ const UploadPage = () => {
       {tabs === 2 && (
         <div className="flex flex-col  justify-center items-center gap-11 h-[40vh]">
           <button
-            onClick={fundNode}
-            className="bg-[#476FFF] rounded-md p-3 text-lg"
+            onClick={async () => {
+              setFundingLoader(true);
+              try {
+                await fundNode();
+              } catch (error) {
+                console.error(error);
+              } finally {
+                setFundingLoader(false);
+              }
+            }}
+            className="bg-[#476FFF] flex items-center gap-3 rounded-md p-3 text-lg"
           >
-            Fund a node
+            Fund a node {fundingLoader && <Loader2 className="animate-spin" />}
           </button>
         </div>
       )}
