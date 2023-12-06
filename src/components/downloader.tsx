@@ -31,7 +31,7 @@ const Downloader = ({ data }) => {
         }
       }}
     >
-      <Download className="hidden group-hover:flex" />
+      <Download className="flex" />
     </div>
   );
 };

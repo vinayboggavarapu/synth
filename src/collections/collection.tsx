@@ -32,7 +32,7 @@ const Collections = () => {
     fetchData();
   }, []);
   return (
-    <div className=" p-3 grid grid-cols-4 gap-4">
+    <div className=" p-3 overflow-y-auto grid grid-cols-4 gap-4">
       {data &&
         Object.keys(data).map((item) => (
           <Link
@@ -42,10 +42,13 @@ const Collections = () => {
             // }}
             //@ts-expect-error checking
             key={item.id}
-            className="p-3 flex flex-col gap-3 bg-gray-200 cursor-pointer h-96 border"
+            className="flex flex-col gap-3 bg-[#3B3B3B] text-white rounded-3xl cursor-pointer h-96"
           >
-            <p>Collection Name</p>
-            <p>{item}</p>
+            <img className="w-full h-64" src="/collection-image.png" />
+            <div className="p-3 flex flex-col gap-3">
+              <p>Collection Name</p>
+              <p className="text-lg font-semibold">{item}</p>
+            </div>
           </Link>
         ))}
     </div>
