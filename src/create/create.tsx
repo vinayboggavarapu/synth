@@ -6,7 +6,6 @@ import { sha256 } from "crypto-hash";
 
 import * as LitJsSdk from "@lit-protocol/lit-node-client";
 
-//@ts-expect-error checking
 import Papa from "papaparse";
 import { myQuery } from "@/utils/queryInit";
 import { useAccount } from "wagmi";
@@ -32,17 +31,16 @@ const UploadPage = () => {
   const handleFileUpload = async (file: File) => {
     // const file = event.target.files[0];
     Papa.parse(file, {
-      //@ts-expect-error checking
       complete: async (results) => {
         console.log(results);
-        //@ts-expect-error checking
+
         const text = results.data.map((row) => row.join(" ")).join("\n");
         // console.log(text);
         sha256(text).then((hash) => {
           setDataHash(hash);
         });
       },
-      //@ts-expect-error checking
+
       error: (error) => {
         console.error(error);
       },
