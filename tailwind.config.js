@@ -5,8 +5,10 @@ module.exports = {
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}",
+    "./src/**/*.{js,jsx,ts,tsx}",
+    "./node_modules/react-tailwindcss-datepicker/dist/index.esm.js"
   ],
+  
   theme: {
     container: {
       center: true,
@@ -17,6 +19,13 @@ module.exports = {
     },
     extend: {
       colors: {
+        lighttext: '#d9d9d9',
+        darkbgr:'#181818',
+        accentindigo:'#3054d3',
+        accentblue:'#476fff',
+        accentpurple:'#dd45ea',
+        linearbtndr:'#fc41ff',
+        linearbtnlt:'#cc1vcf',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
