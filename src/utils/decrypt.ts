@@ -35,7 +35,6 @@ export async function decryptFile(
     // 2. Extract the zipBlob
     const zipBlob = await response.blob();
 
-    //@ts-ignore
     const litNodeClient = new LitJsSdk.LitNodeClient({
       litNetwork: "cayenne",
     });
@@ -52,10 +51,10 @@ export async function decryptFile(
       litNodeClient: litNodeClient,
       authSig: authSig, // Include this only if necessary
     });
-    // @ts-ignore
-    const decryptedFile = result.decryptedFile;
+
+    const decryptedFile = result?.decryptedFile;
     // 5. Convert to a blob
-    const blob = arrayBufferToBlob(decryptedFile, encryptedFileType);
+    const blob = arrayBufferToBlob(decryptedFile!, encryptedFileType);
     // 6. Build a dynamic URL
     const dataUrl = await blobToDataURL(blob);
 
@@ -69,6 +68,7 @@ export async function decryptFile(
     return dataUrl;
   } catch (e) {
     console.error("Error decrypting file:", e);
+    alert("You dont hold the rights to access");
   }
   return "";
 }

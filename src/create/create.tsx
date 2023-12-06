@@ -132,6 +132,7 @@ const UploadPage = () => {
           { tags }
         );
         console.log(`File uploaded ==> https://gateway.irys.xyz/${receipt.id}`);
+        alert("File uploaded successfully");
       } catch (e) {
         console.log("Error uploading file ", e);
       }
