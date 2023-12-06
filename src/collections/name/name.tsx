@@ -89,7 +89,9 @@ const CollectionPage = () => {
               <Downloader data={item} />
               {
                 //@ts-expect-error checking
-                <StampTxn id={item.id as string} count={stampsData} />
+                item.tags.length < 4 && (
+                  <StampTxn id={item.id as string} count={stampsData} />
+                )
               }
             </div>
           </div>
