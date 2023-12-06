@@ -28,7 +28,6 @@ const CollectionPage = () => {
         .sort("DESC")
         .tags([{ name: "DReq-Stamp", values: [id] }])
         .first();
-
       results[id] = res ? res.tags[3]?.value : 0;
     }
     setStampsData(results);

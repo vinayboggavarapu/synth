@@ -1,4 +1,6 @@
 
+
+import {Link} from "react-router-dom"
 const Footer = () => {
     return (<footer className=" text-center lg:text-left">
     {/* <!-- Main container div: holds the entire content of the footer, including four sections (TW Elements, Products, Useful links, and Contact), with responsive styling and appropriate padding/margins. --> */}
@@ -18,17 +20,28 @@ const Footer = () => {
           <h6 className="text-indigo-500 mb-4 flex justify-center font-semibold uppercase md:justify-start">
             Pages
           </h6>
+
+<Link to="/home">
+
+   
           <p className="mb-4">
             <a className="">Home</a>
           </p>
-          <p className="mb-4">
+          </Link>
+          <Link to="/collections">
+
+                    <p className="mb-4">
             <a className="">
               Collection
             </a>
           </p>
+          </Link>
+          <Link to="/create">
+
           <p className="mb-4">
             <a className="">Create</a>
           </p>
+          </Link>
         </div>
         <div className="">
           <h6 className="text-indigo-500 mb-4 flex justify-center font-semibold uppercase md:justify-start">
@@ -52,10 +65,10 @@ const Footer = () => {
         </div>
 
         <div>
-          <h6 className="text-indigo-500 mb-4 flex justify-center font-semibold uppercase md:justify-start">
+          <h6 className="text-indigo-500 mb-4 flex gap-4 justify-center font-semibold uppercase md:justify-start">
             Connect
           </h6>
-          <p className="mb-4 flex items-center justify-center md:justify-start">
+          <p className="mb-4 flex items-center gap-2 justify-center md:justify-start">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="21"
@@ -68,9 +81,9 @@ const Footer = () => {
                 fill="#D9D9D9"
               />
             </svg>
-             Discord
+              Discord
           </p>
-          <p className="mb-4 flex items-center justify-center md:justify-start">
+          <p className="mb-4 flex items-center gap-2 justify-center md:justify-start">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -83,9 +96,9 @@ const Footer = () => {
                 fill="#D9D9D9"
               />
             </svg>
-             Twitter
+              Twitter
           </p>
-          <p className="mb-4 flex items-center justify-center md:justify-start">
+          <p className="mb-4 flex items-center gap-2 justify-center md:justify-start">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -107,7 +120,7 @@ const Footer = () => {
               />
               <circle cx="15.375" cy="4.62499" r="0.66625" fill="#D9D9D9" />
             </svg>
-             Instagram
+              Instagram
           </p>
         </div>
       </div>
@@ -118,3 +131,4 @@ const Footer = () => {
     </div>
   </footer>);
 };
+export default Footer;

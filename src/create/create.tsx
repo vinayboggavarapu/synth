@@ -32,15 +32,12 @@ const UploadPage = () => {
     // const file = event.target.files[0];
     Papa.parse(file, {
       complete: async (results) => {
-        console.log(results);
-
         const text = results.data.map((row) => row.join(" ")).join("\n");
         // console.log(text);
         sha256(text).then((hash) => {
           setDataHash(hash);
         });
       },
-
       error: (error) => {
         console.error(error);
       },
@@ -146,7 +143,7 @@ const UploadPage = () => {
   }, [dataHash]);
 
   return (
-    <div className="flex flex-col gap-4 max-w-5xl mx-auto w-full">
+    <div className="flex flex-col gap-4 max-w-5xl mx-auto w-full pb-40">
       <h1 className="text-3xl mx-auto font-semibold">Create Collection</h1>
       {/* Section 1 */}
       {tabs === 1 && (

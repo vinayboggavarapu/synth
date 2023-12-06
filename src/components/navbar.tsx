@@ -32,7 +32,7 @@ const Navbar = () => {
   // };
 
   return (
-    <div className="flex py-5 sticky top-0 bg-black text-lg justify-between items-center w-full">
+    <div className="flex py-5 sticky z-[1000] top-0 bg-black text-lg justify-between items-center w-full">
       {/* Logo here */}
       <Link
         to="/"
