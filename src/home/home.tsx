@@ -14,10 +14,10 @@ const Home = () => {
       <div className="flex flex-row pt-20">
         <div className="flex-col">
           <div className="w-auto text-white text-5xl font-bold pl-14 pr-10">
-            Synthesize your AI model with data on our platform
+            Synthesize your AI model with data
           </div>
           <div className="w-auto text-white text-2xl font-medium font-['Space Grotesk'] p-14">
-            Unleash the power of collective datasets for AI training, secured
+            Unleash the power of collective datasets for AI training, stored
             permanently with Arweave, shaping the future of decentralized data
             collaboration
           </div>
@@ -78,9 +78,8 @@ const Home = () => {
                 Community Driven Datasets
               </div>
               <div className="self-stretch text-base font-normal  leading-[24.89px]">
-                Dive into the power of trust with Synth's community-curated
-                datasets, shaping a secure and collaborative foundation for
-                decentralized data excellence.
+                Dive into the power of trust with Synth's community curated and ranked
+                datasets to ensure you get high quality datasets
               </div>
             </div>
           </div>
@@ -97,9 +96,8 @@ const Home = () => {
                 Incentivized Collection{" "}
               </div>
               <div className="self-stretch  text-base font-normal  leading-[24.89px]">
-                Earn rewards for contributing valuable datasets with Synth's
-                Incentivized Collections—empowering collaborative data creation
-                within our community.
+                Earn rewards for contributing valuable datasets with Synth's Data Contribution
+                Incentivized Program
               </div>
             </div>
           </div>

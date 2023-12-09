@@ -41,8 +41,11 @@ const Collections = () => {
           Explore Collections curated to train your AI model
         </div>
       </div>
-      <div className="ml-6 mt-20 w-[200px] h-[60px] px-[50px]  bg-gradient-to-b from-fuchsia-500 to-fuchsia-700 rounded-[20px] justify-center items-center gap-3 inline-flex">
-        <div className="w-5 h-5 relative" />
+
+
+      <Link to="/UploadPage">
+
+      <div className="ml-6 mt-20 w-40 h-14 px-20  bg-gradient-to-b from-fuchsia-500 to-fuchsia-700 rounded-[20px] justify-center items-center gap-3 inline-flex">
         <div className="w-auto h-auto relative">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -57,11 +60,13 @@ const Collections = () => {
             />
           </svg>
         </div>
+
         <div className="text-white text-2xl font-semibold justify-center center ">
           Upload
         </div>
+        
       </div>
-
+      </Link>  
       <div className=" p-3 overflow-y-auto grid grid-cols-4 gap-4 pt-20">
         {data &&
           Object.keys(data).map((item) => (
@@ -76,7 +81,7 @@ const Collections = () => {
             >
               <img className="w-full h-64" src="/collection-image.png" />
               <div className="p-3 flex flex-col gap-3">
-                <p>Collection Name</p>
+                <p>Collection</p>
                 <p className="text-lg font-semibold">{item}</p>
               </div>
             </Link>

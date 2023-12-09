@@ -144,7 +144,9 @@ const UploadPage = () => {
 
   return (
     <div className="flex flex-col gap-4 max-w-5xl mx-auto w-full pb-40">
-      <h1 className="text-3xl mx-auto font-semibold">Create Collection</h1>
+
+      <img className="mx-auto" src="/create.svg" alt="create" width={300} height={300} />
+      <h1 className="text-2xl mx-auto font-semibold">Create or Add to Existing Collection</h1>
       {/* Section 1 */}
       {tabs === 1 && (
         <div className="flex flex-col  justify-center gap-11 h-[40vh]">

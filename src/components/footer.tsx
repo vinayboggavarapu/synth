@@ -2,13 +2,14 @@
 
 import {Link} from "react-router-dom"
 const Footer = () => {
-    return (<footer className=" text-center lg:text-left">
+    return (
+    <footer className="text-center lg:text-left relative mt-auto">
     {/* <!-- Main container div: holds the entire content of the footer, including four sections (TW Elements, Products, Useful links, and Contact), with responsive styling and appropriate padding/margins. --> */}
     <div className="mx-6 py-10 text-center md:text-left">
       <div className="grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
         <div className="">
           <h6 className="mb-4 flex items-center justify-center font-semibold uppercase md:justify-start">
-            Synth
+          <img src="/synth.png" className="w-24 h-16" alt="logo" />
           </h6>
 
           <p>
@@ -45,21 +46,21 @@ const Footer = () => {
         </div>
         <div className="">
           <h6 className="text-indigo-500 mb-4 flex justify-center font-semibold uppercase md:justify-start">
-            Services
+            Pages
           </h6>
           <p className="mb-4">
             <a className="">
-              Create Collection
+              About
             </a>
           </p>
           <p className="mb-4">
             <a className="">
-              Add to existing collection
+              Contact Us
             </a>
           </p>
           <p className="mb-4">
             <a className="">
-              Request a collection
+             Docs
             </a>
           </p>
         </div>
