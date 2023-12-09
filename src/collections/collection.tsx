@@ -43,7 +43,7 @@ const Collections = () => {
       </div>
 
 
-      <Link to="/UploadPage">
+      <Link to="/create">
 
       <div className="ml-6 mt-20 w-40 h-14 px-20  bg-gradient-to-b from-fuchsia-500 to-fuchsia-700 rounded-[20px] justify-center items-center gap-3 inline-flex">
         <div className="w-auto h-auto relative">
